@@ -1,0 +1,1 @@
+export type { BaseComponentProps, ComponentSize, ComponentVariant } from './component.types';
