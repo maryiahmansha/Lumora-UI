@@ -1,26 +1,7 @@
-import { cva, type VariantProps } from "class-variance-authority";
+import { type VariantProps } from "class-variance-authority";
 import React from "react";
 import { cn } from "../../../utils";
-
-const inputVariants = cva("lumora-input", {
-  variants: {
-    variant: {
-      primary: "bg-blue-600 text-white hover:bg-blue-700",
-      secondary: "bg-slate-100 text-slate-900 hover:bg-slate-200",
-      outline: "border border-slate-200 bg-white hover:bg-slate-100",
-      ghost: "hover:bg-slate-100 hover:text-slate-900",
-    },
-    inputSize: {
-      sm: "h-9 rounded-md px-3",
-      md: "h-10 px-4 py-2",
-      lg: "h-11 rounded-md px-8",
-    },
-  },
-  defaultVariants: {
-    variant: "primary",
-    inputSize: "md",
-  },
-});
+import { inputVariants } from "./inputVariants";
 
 export interface InputProps
   extends React.InputHTMLAttributes<HTMLInputElement>,
@@ -56,4 +37,4 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
 
 Input.displayName = "Input";
 
-export { Input, inputVariants };
+export { Input };

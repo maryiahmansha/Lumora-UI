@@ -22,3 +22,4 @@ A modern, accessible React component library built with TypeScript and Tailwind 
 npm install lumora-ui
 # or
 yarn add lumora-ui
+```

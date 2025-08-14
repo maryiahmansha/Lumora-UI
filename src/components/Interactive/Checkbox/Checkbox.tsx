@@ -1,25 +1,7 @@
-import { cva, type VariantProps } from "class-variance-authority";
+import { type VariantProps } from "class-variance-authority";
 import React from "react";
 import { cn } from "../../../utils";
-
-const checkBoxVariants = cva("lumora-checkbox", {
-  variants: {
-    variant: {
-      default: "text-gray-900",
-      error: "text-red-600",
-      success: "text-green-600",
-    },
-    checkBoxSize: {
-      sm: "h-4 w-4",
-      md: "h-5 w-5",
-      lg: "h-6 w-6",
-    },
-  },
-  defaultVariants: {
-    variant: "default",
-    checkBoxSize: "md",
-  },
-});
+import { checkBoxVariants } from "./checkboxVariants";
 
 export interface CheckboxProps
   extends React.InputHTMLAttributes<HTMLInputElement>,
@@ -64,4 +46,4 @@ const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
 
 Checkbox.displayName = "Checkbox";
 
-export { Checkbox, checkBoxVariants };
+export { Checkbox };

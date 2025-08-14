@@ -2,18 +2,18 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --lumora-primary: 59 130 246;
-        --lumora-primary-foreground: 255 255 255;
-        --lumora-secondary: 148 163 184;
-        --lumora-secondary-foreground: 15 23 42;
-    }
+  :root {
+    --lumora-primary: 59 130 246;
+    --lumora-primary-foreground: 255 255 255;
+    --lumora-secondary: 148 163 184;
+    --lumora-secondary-foreground: 15 23 42;
+  }
 }
 
 @layer components {
-    .lumora-btn {
-        @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors;
-        @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
-        @apply disabled:pointer-events-none disabled:opacity-50;
-    }
+  .lumora-btn {
+    @apply inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
+    @apply disabled:pointer-events-none disabled:opacity-50;
+  }
 }

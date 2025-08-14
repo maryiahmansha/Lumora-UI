@@ -1,25 +1,7 @@
-import { cva, type VariantProps } from "class-variance-authority";
+import { type VariantProps } from "class-variance-authority";
 import React from "react";
 import { cn } from "../../../utils";
-
-const radioVariants = cva("lumora-radio", {
-  variants: {
-    variant: {
-      default: "text-blue-600 focus:ring-blue-500",
-      error: "text-red-600 focus:ring-red-500 border-red-500",
-      success: "text-green-600 focus:ring-green-500 border-green-500",
-    },
-    boxSize: {
-      sm: "h-9 rounded-md px-3",
-      md: "h-10 px-4 py-2",
-      lg: "h-11 rounded-md px-8",
-    },
-  },
-  defaultVariants: {
-    variant: "default",
-    boxSize: "md",
-  },
-});
+import { radioVariants } from "./radioVariants";
 
 export interface RadioProps
   extends React.InputHTMLAttributes<HTMLInputElement>,
@@ -36,6 +18,7 @@ const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
           type="radio"
           ref={ref}
           className={cn(radioVariants({ variant, boxSize }), className)}
+          {...props}
         />
         {label && (
           <span
@@ -54,4 +37,4 @@ const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
 );
 Radio.displayName = "Radio";
 
-export { Radio, radioVariants };
+export { Radio };
