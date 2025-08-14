@@ -1,4 +1,4 @@
-import { Button } from './components/Button/Button';
+import { Button } from './components/Interactive/Button/Button';
 import './styles/globals.css';
 
 function App() {
