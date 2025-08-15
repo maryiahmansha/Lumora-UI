@@ -13,7 +13,7 @@ const meta: Meta<typeof Radio> = {
       control: { type: "select" },
       options: ["default", "error", "success"],
     },
-    size: {
+    boxSize: {
       control: { type: "select" },
       options: ["sm", "md", "lg"],
     },
