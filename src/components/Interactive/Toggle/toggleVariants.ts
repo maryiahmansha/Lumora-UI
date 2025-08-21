@@ -21,3 +21,19 @@ export const toggleVariants = cva(
         }
     }
 )
+
+export const toggleThumbVariants = cva(
+    "inline-block rounded-full bg-white shadow transform ring-0 transition-transform",
+    {
+        variants: {
+            size: {
+                sm: "h-3 w-3 data-[state=checked]:translate-x-3",
+                md: "h-4 w-4 data-[state=checked]:translate-x-4",
+                lg: "h-5 w-5 data-[state=checked]:translate-x-5",
+            }
+        },
+        defaultVariants: {
+            size: "md"
+        }
+    }
+)
